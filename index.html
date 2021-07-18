@@ -8,11 +8,37 @@
     <title>Video Player</title>
 </head>
 <body>
-    <h1>Hola Mundo!</h1>
-    <button class="button" id="backward"></button>
-    <button class="button" id="forward"></button>
-    <button class="button" id="play"></button>
-    <button class="button" id="pause"></button>
-    <video controls autoplay muted src="./videos/lofi.mp4" width="400"></video>
+    <div class="wrapper">
+        <div class="player">
+            <button class="button" id="backward" aria-label="Retroceder 10 segundos" title="Retroceder 10 segundos"></button>
+            <button class="button" id="play" aria-label="Reproducir" title="Reproducir"></button>
+            <button class="button" hidden id="pause" aria-label="Pausar" title="Pausar"></button>
+            <button class="button" id="forward" aria-label="Adelantar 10 segundos" title="Adelantar 10 segundos"></button>
+            <video id="video" poster="./images/poster.jpg" controls muted src="./videos/lofi.mp4" width="400"></video>
+        </div>
+    </div>
+
+    <script>
+        const $video = document.querySelector('#video');
+        const $play = document.querySelector('#play');
+        const $pause = document.querySelector('#pause');
+
+        $play.addEventListener('click', handlePlay);
+        $pause.addEventListener('click', handlePause);
+
+        function handlePlay() {
+            $video.play();
+            $play.hidden = true;
+            $pause.hidden = false;
+            console.log('le diste click al botón de play');
+        }
+
+        function handlePause() {
+            $video.pause();
+            $pause.hidden = true;
+            $play.hidden = false;
+            console.log('le diste click al botón de pause');
+        }
+    </script>
 </body>
 </html>

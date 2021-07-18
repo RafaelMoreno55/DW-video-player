@@ -1,11 +1,15 @@
 .button {
-    inline-size: 60px; /*ancho del botón*/
+    inline-size: 32px; /*ancho del botón*/
     block-size: 32px; /*alto del botón*/
     border: none; /*sin bordes*/
     background-color: transparent; /*color de fondo, no de la imagen*/
-    border: 1px solid red; 
     background-repeat: no-repeat; /*no rellena el espacio vacio*/
     background-position: center; /*centra el elemento dentro del botón*/
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(.9);
 }
 
 #play {
