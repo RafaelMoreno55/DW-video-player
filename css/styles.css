@@ -12,5 +12,4 @@ body {
 
 .player video{
     inline-size: 100%;
-    border: 10px solid red;
 }
