@@ -1,3 +1,4 @@
+/*selector de clase*/
 .button {
     inline-size: 32px; /*ancho del botón*/
     block-size: 32px; /*alto del botón*/
@@ -5,25 +6,30 @@
     background-color: transparent; /*color de fondo, no de la imagen*/
     background-repeat: no-repeat; /*no rellena el espacio vacio*/
     background-position: center; /*centra el elemento dentro del botón*/
-    cursor: pointer;
+    cursor: pointer; /*cambia el cursor cuando se pasa por el botón*/
 }
 
+/*pseudo clase -> :active*/
 .button:active {
-    transform: scale(.9);
+    transform: scale(.9); /*efecto para indicar que se presionó el botón*/
 }
 
+/*selector de ID*/
 #play {
-    background-image: url('../images/play.svg');
+    background-image: url('../images/play.svg'); /*imagen de play que se visualiza en el botón*/
 }
 
+/*selector de ID*/
 #pause {
-    background-image: url('../images/pause.svg');
+    background-image: url('../images/pause.svg'); /*imagen de pause que se visualiza en el botón*/
 }
 
+/*selector de ID*/
 #backward {
-    background-image: url('../images/-10.svg');
+    background-image: url('../images/-10.svg'); /*imagen de retroceder que se visualiza en el botón*/
 }
 
+/*selector de ID*/
 #forward {
-    background-image: url('../images/+10.svg');
+    background-image: url('../images/+10.svg'); /*imagen de avanzar que se visualiza en el botón*/
 }
