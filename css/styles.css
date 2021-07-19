@@ -24,6 +24,7 @@ body {
     inline-size: 100%; /*el video es mostrado con su tamaño real*/
     aspect-ratio: 16/9; /*establece una relación de aspecto preferida para la caja. Utilizada para calcular el tamaño automáticamente del video*/
     vertical-align: middle; /*alinea al centro el video con respecto al contenedor con selector .wrapper*/
+    object-fit: cover; /*la imagen de poster abarca de manera proporcional el aspecto-radio 16/9*/
 }
 
 /*selector de clase*/
@@ -57,4 +58,16 @@ body {
 /*operadores de combinación descendentes*/
 .player-progress input {
     flex: 1; /*la barra de progreso abarca todo el ancho del video*/
+}
+
+.player-overlay {
+    position: absolute; /*para que coincida con los botónes, barra de progreso y el título*/
+    inset: 0; /*expandir en todo el video*/
+    opacity: 0; /*ocultar los elementos de reproducción*/
+    transition: .3s opacity; /*realizar la transición en 3 segundos a la propiedad opacity*/
+}
+
+/*pseudo clase -> :hover y operadores de combinación descendentes*/
+.player:hover .player-overlay{
+    opacity: 1; /*mostrar los elementos de reproducción*/
 }
